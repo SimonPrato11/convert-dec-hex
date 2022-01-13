@@ -1,0 +1,22 @@
+{
+  "name": "convert-dehex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./port/index.js",
+    "dev": "nodemon ./port/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  }
+}
