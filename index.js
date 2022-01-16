@@ -14,8 +14,19 @@ export function convert(value) {
   if (isNaN(value)) {
     return 'Its not a number'
   } else {
-    const hexString = value.toString(16)
-    return hexString.toUpperCase()
+    const hexadecimal = []
+    const array = ['A', 'B', 'C', 'D', 'E', 'F']
+    while (value > 0) {
+      let reminder = value % 16
+      value = Math.floor(value / 16)
+      // console.log('reminder', reminder, 'value', value)
+      if (reminder > 9) {
+        hexadecimal.unshift(array[reminder - 10])
+      } else {
+        hexadecimal.unshift(reminder)
+      }
+    }
+    return hexadecimal.join('')
   }
 }
 
